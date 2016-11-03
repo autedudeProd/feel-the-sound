@@ -1,4 +1,6 @@
-<Feel The Sound/>
+<h1>
+  <FeelTheSound>
+</h1>
 
 03/11/2016
 
@@ -18,4 +20,8 @@ Concernant les différents modes de jeux :
 
 2) MODE DUEL : Mode dans lequel un joueur en affronte un autre (1v1)
 
+<<<<<<< HEAD
 3) MODE ONLINE : Comme son nom l'indique, c'est un mode "online" qui nous permettra d'affronter en temps réel des joueurs connectés sur l'application, chacun pour sa peau avec la désignation d'un 1er,2ème,3ème.
+=======
+3) MODE CHALLENGE : Un autre mode qui permettra à FeelTheSound de stocker la meilleure partie de tous les joueurs afin de pouvoir les défier.
+>>>>>>> origin/master
