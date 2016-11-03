@@ -1,3 +1,12 @@
+Feel The Sound
+
+03/11/2016
+
+Baptiste TEXIER
+Quentin DESIMEUR
+Thomas DUPIN
+Denis AUDINET
+
 Intro :
 Aimant tous les quatre la musique et trouvant ce sujet super attractif et accessible à tous et à toutes on a pris la décision commune de choisir la création d’un BLIND TEST ayant plusieurs évolutions.
 
