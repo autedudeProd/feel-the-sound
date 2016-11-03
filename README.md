@@ -1,4 +1,4 @@
-<p><FeelTheSound/></p>
+<h1>FeelTheSound</h1>
 
 03/11/2016
 
@@ -17,4 +17,4 @@ Concernant les différents modes de jeux :
 
 2) MODE MULTIPLAYER : Comme son nom l'indique, c'est un mode "online" qui nous permettra d'affronter en temps réel des joueurs situés aux quatre coins du monde.
 
-3) MODE CHALLENGE : Un autre mode qui permettra à <FeelTheSound/> de stocker la meilleure partie de tous les joueurs afin de pouvoir les défier.
+3) MODE CHALLENGE : Un autre mode qui permettra à FeelTheSound de stocker la meilleure partie de tous les joueurs afin de pouvoir les défier.
