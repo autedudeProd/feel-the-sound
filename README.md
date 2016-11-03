@@ -1,11 +1,11 @@
-/<Feel The Sound/>/
+<FeelTheSound//>
 
 03/11/2016
 
-Baptiste TEXIER
-Quentin DESIMEUR
-Thomas DUPIN
-Denis AUDINET
+Baptiste TEXIER\n
+Quentin DESIMEUR\n
+Thomas DUPIN\n
+Denis AUDINET\n
 
 Notre projet est un "blindtest", c'est un jeu qui consiste à retrouver le ou les artistes à partir de plusieurs petits extraits musicaux.
 Nous avons eu l'idée d'apporter une touche original à ce petit programme bien connu de tous, en effet FeelTheSound ne sera pas simplement audible mais également visuel et pour se faire, nous voudrions pouvoir intégrer des questions-images afin de rajouter une autre facette à notre contenu.
