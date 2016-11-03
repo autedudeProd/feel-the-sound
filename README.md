@@ -13,7 +13,7 @@ Nous avons eu l'idée d'apporter une touche original à ce petit programme bien 
 
 Concernant les différents modes de jeux :
 
-1) MODE SOLO : Mode dans lequel nous ferions face à la montre sur un nombre de questions prédéterminées, (ou bien répondre au plus de questions en un temps record).
+1) MODE SOLO : Mode dans lequel nous ferons face à la montre sur un nombre de questions prédéterminées, (ou bien répondre au plus de questions en un temps record).
 
 2) MODE MULTIPLAYER : Comme son nom l'indique, c'est un mode "online" qui nous permettra d'affronter en temps réel des joueurs situés aux quatre coins du monde.
 
