@@ -4,7 +4,7 @@
 
 03/11/2016
 
-Baptiste TEXIER
+<p>Baptiste TEXIER</p>
 Quentin DESIMEUR
 Thomas DUPIN
 Denis AUDINET
