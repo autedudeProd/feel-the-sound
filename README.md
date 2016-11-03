@@ -4,15 +4,21 @@
 
 03/11/2016
 
-<p>Baptiste TEXIER</p>
-Quentin DESIMEUR
-Thomas DUPIN
-Denis AUDINET
+<ul>
+  <li>
+  Baptiste TEXIER<br>
+  Quentin DESIMEUR<br>
+  Thomas DUPIN<br>
+  Denis AUDINET<br>
+  </li>
+</ul>
 
-Notre projet est un "blindtest", c'est un jeu qui consiste à retrouver le ou les artistes à partir de plusieurs petits extraits musicaux.
-Sous forme de QCM avec pour chaques questions plusieurs choix de réponses envisageables. (Ex : Un extrait audio, 4 réponses apparaissent, une seule réponse est bonne.)
-Nous avons eu l'idée d'apporter une touche originale à ce petit programme bien connu de tous, en effet <FeelTheSound/> ne sera pas simplement audible mais également visuel et pour se faire, nous voudrions pouvoir intégrer des questions-images afin d'ajouter une autre facette à notre contenu.
-(Ex : Une photo d’un chanteur apparait et nous devons deviner son nom).
+<p>
+  Notre projet est un "blindtest", c'est un jeu qui consiste à retrouver le ou les artistes à partir de plusieurs petits extraits musicaux.
+  Sous forme de QCM avec pour chaques questions plusieurs choix de réponses envisageables. (Ex : Un extrait audio, 4 réponses apparaissent, une seule réponse est bonne.)
+  Nous avons eu l'idée d'apporter une touche originale à ce petit programme bien connu de tous, en effet <FeelTheSound/> ne sera pas simplement audible mais également visuel et pour se faire, nous voudrions pouvoir intégrer des questions-images afin d'ajouter une autre facette à notre contenu.
+  (Ex : Une photo d’un chanteur apparait et nous devons deviner son nom).
+</p>
 
 Concernant les différents modes de jeux :
 
