@@ -1,6 +1,5 @@
 <h1>
-  <wbr></wbr>
-  <FeelTheSound/>
+  <FeelTheSound>
 </h1>
 
 03/11/2016
