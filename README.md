@@ -5,12 +5,10 @@
 03/11/2016
 
 <ul>
-  <li>
-  Baptiste TEXIER<br>
-  Quentin DESIMEUR<br>
-  Thomas DUPIN<br>
-  Denis AUDINET<br>
-  </li>
+  <li>Baptiste TEXIER</li>
+  <li>Quentin DESIMEUR</li>
+  <li>Thomas DUPIN</li>
+  <li>Denis AUDINET</li>
 </ul>
 
 <p>
@@ -22,8 +20,10 @@
 
 Concernant les différents modes de jeux :
 
-1) MODE SOLO : Mode dans lequel nous ferons face à la montre sur un nombre de questions prédéterminées,
+<ul>
+  <li>MODE SOLO : Mode dans lequel nous ferons face à la montre sur un nombre de questions prédéterminées</li>
 
-2) MODE DUEL : Mode dans lequel un joueur en affronte un autre (1v1)
+  <li>MODE DUEL : Mode dans lequel un joueur en affronte un autre (1v1)</li>
 
-3) MODE ONLINE : Comme son nom l'indique, c'est un mode "online" qui nous permettra d'affronter en temps réel des joueurs connectés sur l'application, chacun pour sa peau avec la désignation d'un 1er,2ème,3ème.
+  <li>MODE ONLINE : Comme son nom l'indique, c'est un mode "online" qui nous permettra d'affronter en temps réel des joueurs connectés sur l'application, chacun pour sa peau avec la désignation d'un 1er, 2ème, 3ème</li>
+</ul>
