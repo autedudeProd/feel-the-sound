@@ -25,7 +25,7 @@ var trait = function (req, res, query) {
     page = page.supplant(marqueurs);
 
     for(i=0; i<liste.length; i++) {
-        liste = 
+        liste = []
     }
 
     res.writeHead(200, {'Content-Type': 'text/html'});
