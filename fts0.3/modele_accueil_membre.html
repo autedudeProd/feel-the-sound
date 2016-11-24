@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv="refresh" content="1; url=/req_attendre_defi?pseudo={pseudo}"/>
+
+	<h2> Bienvenue sur la page d'accueil de membre !</h2>
+
+	<p/>
+	Bonjour <em>{pseudo}<em>
+	</p>
+
+	<br>
+	<ul>
+		{connecte}
+	</ul>
+
+	<form action="/req_rappeler_regle" method="GET">
+	<br>
+	<button name="action" value="creer">JOUER</button>
+
+	</form>
+
+	<form action="/req_commencer" method="GET">
+	<button name="action" value="se deconnecter">Se déconnecter</button>
+	</form>
+
+
+</html>
+
+
+
+<!-- rappel fonctionnement href -->
+<!-- <a href="redirection"> Nom que l'on veut donner </a> -->
