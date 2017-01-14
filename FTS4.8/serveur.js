@@ -22,11 +22,13 @@ var req_rappeler_regle = require("./req_rappeler_regle.js");
 var req_jouer_solo = require("./req_jouer_solo.js");
 var req_attendre_duel = require("./req_attendre_duel.js");
 var req_quitter_attente = require("./req_quitter_attente.js");
-var req_proposer_duel = require ("./req_proposer_duel.js");
-var req_verifier_reponse = require ("./req_verifier_reponse.js");
+var req_proposer_duel = require("./req_proposer_duel.js");
+var req_verifier_reponse = require("./req_verifier_reponse.js");
 var req_afficher_question = require("./req_afficher_question.js");
-var req_accueil_membre = require ("./req_accueil_membre.js");
+var req_accueil_membre = require("./req_accueil_membre.js");
 var req_deconexion = require("./req_deconexion.js");
+var req_attendre_reponse_duel = require("./req_attendre_reponse_duel.js");
+var req_accepter_duel = require("./req_accepter_duel.js");
 
 var req_static = require("./req_static.js");
 var req_erreur = require("./req_erreur.js");
@@ -51,49 +53,55 @@ var traite_requete = function (req, res) {
 
     try {
         switch (pathname) {
-            case '/':
-            case '/req_commencer':
-                req_commencer(req, res, query);
-                break;
-            case '/req_afficher_formulaire_inscription':
-                req_afficher_formulaire_inscription(req, res, query);
-                break;
-            case '/req_inscrire':
-                req_inscrire(req, res, query);
-                break;
-            case '/req_identifier':
-                req_identifier(req, res, query);
-                break;
-			case '/req_rappeler_regle':
-				req_rappeler_regle(req, res, query);
-				break;
-			case '/req_jouer_solo':
-				req_jouer_solo(req, res, query);
-				break;
-			case '/req_attendre_duel':
-				req_attendre_duel(req, res, query);
-				break;
-			case '/req_quitter_attente':
-				req_quitter_attente(req, res, query);
-				break;
-			case '/req_accueil_membre':
-				req_accueil_membre(req, res, query);
-				break;
-            case '/req_proposer_duel':
-                req_proposer_duel(req, res, query);
-                break;
-			case '/req_verifier_reponse':
-				req_verifier_reponse(req, res, query);
-				break;
-			case '/req_afficher_question':
-				req_afficher_question(req, res, query);
-				break;
-			case '/req_deconexion':
-				req_deconexion (req, res, query);
-				break;
-            default:
-                req_static(req, res, pathname);
-                break;
+        case '/':
+        case '/req_commencer':
+            req_commencer(req, res, query);
+            break;
+        case '/req_afficher_formulaire_inscription':
+            req_afficher_formulaire_inscription(req, res, query);
+            break;
+        case '/req_inscrire':
+            req_inscrire(req, res, query);
+            break;
+        case '/req_identifier':
+            req_identifier(req, res, query);
+            break;
+        case '/req_rappeler_regle':
+            req_rappeler_regle(req, res, query);
+            break;
+        case '/req_jouer_solo':
+            req_jouer_solo(req, res, query);
+            break;
+        case '/req_attendre_duel':
+            req_attendre_duel(req, res, query);
+            break;
+        case '/req_quitter_attente':
+            req_quitter_attente(req, res, query);
+            break;
+        case '/req_accueil_membre':
+            req_accueil_membre(req, res, query);
+            break;
+        case '/req_proposer_duel':
+            req_proposer_duel(req, res, query);
+            break;
+        case '/req_verifier_reponse':
+            req_verifier_reponse(req, res, query);
+            break;
+        case '/req_afficher_question':
+            req_afficher_question(req, res, query);
+            break;
+        case '/req_deconexion':
+            req_deconexion(req, res, query);
+            break;
+        case '/req_attendre_reponse_duel':
+            req_attendre_reponse_duel(req, res, query);
+            break;
+        case '/req_accepter_duel':
+            req_accepter_duel(req, res, query);
+            break;
+        default:
+            req_static(req, res, pathname);
+            break;
         }
     } catch (e) {
         console.log('Erreur : ' + e.stack);

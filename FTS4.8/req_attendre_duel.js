@@ -29,11 +29,15 @@ var trait = function (req, res, query) {
     for (j = 0; j < listeMembres.length; j++) {
         if (listeMembres[j].pseudo === query.pseudo) {
             if (listeMembres[j].phase === 6) {
-                console.log("je suis defie");
+
+                console.log("je suis defie par " + listeMembres[i].adv);
+                query.adv = listeMembres[i].adv;
+
                 page = fs.readFileSync('modele_choix_accept_refus.html', 'utf-8');
 
                 marqueurs = {};
                 marqueurs.pseudo = query.pseudo;
+                marqueurs.adv = query.adv;
                 page = page.supplant(marqueurs);
 
                 res.writeHead(200, {
@@ -41,6 +45,7 @@ var trait = function (req, res, query) {
                 });
                 res.write(page);
                 res.end();
+
             } else {
 
                 liste = fs.readFileSync('info.json', 'utf-8');
