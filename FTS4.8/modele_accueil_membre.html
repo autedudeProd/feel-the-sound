@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Feel The Sound</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="skin/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="skin/css/bootstrap.css">
+    <script type="text/javascript" src="skin/js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="skin/js/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- fin Bootstrap -->
+
+    <!-- Skin -->
+    <link rel="stylesheet" type="text/css" href="skin/css/main.css">
+    <link rel="icon" href="skin/img/vinyl.png" />
+    <link rel="stylesheet" type="text/css" href="skin/font/font.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- fin Skin -->
+
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <meta http-equiv="refresh" content="2; url=/req_attendre_duel?pseudo={pseudo}" />
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="col-md-4 element">
+                    <ul>
+                        <li><a href="/#accueil">Accueil</a></li>
+                        <li><a href="/#jeu">Le Jeu</a></li>
+                        <li><a href="/#developpeurs">Développeurs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 brand">
+                    <a href="/ "><img src="skin/img/vinyl.png"> </a>
+                </div>
+
+                <div class="col-md-4 connexion">
+                    <ul>
+                        <li><a class="btn" href="/req_deconexion.">Se Déconnecter</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--/.nav-collapse -->
+        </nav>
+        <!-- fin Navbar -->
+
+    </div>
+
+    <div class="container">
+
+        <div class="corp">
+
+            <div class="col-md-12 titre">
+                <h2> Bienvenue sur la page d'accueil de membre !</h2>
+            </div>
+
+            <p/>Bonjour <em>{pseudo}</em>
+            </p>
+
+            <br>
+
+            <div class="col-md-12 liste_connect">
+                <ul>
+                    {connecte}
+                </ul>
+            </div>
+
+            <br>
+
+            <a href="/req_rappeler_regle?pseudo={pseudo} ">
+                <button type="button " class="btn btn-default " name="action " value="creer ">JOUER</button>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>AUTEDUDE Production</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+body {
+    text-align: center;
+    font: 20px "Montserrat";
+}
+
+#inputPseudo {
+    width: 45%;
+}
+
+#inputPassword {
+    width: 45%;
+}
+
+.deco {
+    margin-top: 11%;
+}
+
+.logotitle {
+    height: 25%;
+    width: 25%;
+}
+
+.corp {
+    background-image: url(img/music-record-vinyl-2560x1600-wallpaper.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 1000px;
+}
+
+.modal-content {
+    text-align: left;
+}
+
+.navbar-brand {
+    margin-top: 10%;
+    font-family: Lost in Wild;
+    color: #448685;
+}
+
+#center {
+    margin-top: 0.5%;
+    margin-left: 28.5%;
+    font-size: 150%;
+}
+
+#right {
+    margin-top: 0.5%;
+}
+
+.navbar {
+    opacity: 0.9;
+    color: #2b3433;
+    position: fixed;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    font-size: 12px;
+}
+
+.navbar-collapse {
+    text-transform: uppercase;
+}
+
+.contenu {
+    padding-top: 5%;
+    color: #e3e5e6;
+}
+
+#accueil {
+    padding-top: 5%;
+}
+
+.footer {
+    background: #2b3433;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    color: white;
+}
+
+.footer p {
+    margin-top: 5px;
+    ;
+}
+
+.navbar-nav li a:hover {
+    color: #448685 !important;
+}
+
+.pseudo {
+    text-align: left;
+}
+
+.password {
+    text-align: left;
+}
+
+.formulaire_inscription {
+    margin-left: 40%;
+    width: 50%;
+}
+
+.error {
+    color: firebrick;
+}
+
+.buttonform {
+    margin-right: 90%;
+}
