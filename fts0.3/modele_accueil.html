@@ -3,29 +3,35 @@
 <html>
 
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<link rel="stylesheet" type="text/css" href="./css/style.css">
 
-<h2>Feel The Sound</h2>
 
-{erreur}
+<body>
 
-<p/>
+	<div class="entete">
+		<h2>Feel The Sound</h2>
+	</div>
 
-<form action="/req_identifier" method="GET"> 
+	{erreur}
 
-    <input type="text" name="pseudo" value="{pseudo}"> 
-    <br/>
-    <input type="password" name="password" value="">
-    <br/>
-    <input type="submit" name="action" value="Se connecter">
+	<p>
 
-</form>
+		<form action="/req_identifier" method="GET"> 
 
-<p/>
+		    <input type="text" name="pseudo" value="{pseudo}"> 
+		    <br/>
+		    <input type="password" name="password" value="">
+		    <br/>
+		    <input type="submit" name="action" value="Se connecter">
+		</form>
 
-<form action="/req_afficher_formulaire_inscription" method="GET">
+	</p>
 
-    <button name="action" value="creer">Créer compte</button>
-    
-</form>
+	<form action="/req_afficher_formulaire_inscription" method="GET">
 
+	    <button name="action" value="creer">Créer compte</button>
+	    
+	</form>
+
+</body>
 </html>

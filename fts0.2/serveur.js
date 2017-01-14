@@ -14,17 +14,17 @@ var querystring = require("querystring");
 // DECLARATION DES DIFFERENTS MODULES CORRESPONDANT A CHAQUE ACTION
 //-------------------------------------------------------------------------
 
-var req_commencer = require("./req_commencer.js");
-var req_afficher_formulaire_inscription = require("./req_afficher_formulaire_inscription.js");
-var req_inscrire = require("./req_inscrire.js");
-var req_identifier = require("./req_identifier.js");
-var req_rappeler_regle = require("./req_rappeler_regle.js");
-var req_jouer_solo = require("./req_jouer_solo.js");
-var req_attendre_defi = require("./req_attendre_defi.js");
-var req_quitter_attente = require("./req_quitter_attente.js");
+var req_commencer = require("./js/req_commencer.js");
+var req_afficher_formulaire_inscription = require("./js/req_afficher_formulaire_inscription.js");
+var req_inscrire = require("./js/req_inscrire.js");
+var req_identifier = require("./js/req_identifier.js");
+var req_rappeler_regle = require("./js/req_rappeler_regle.js");
+var req_jouer_solo = require("./js/req_jouer_solo.js");
+var req_attendre_defi = require("./js/req_attendre_defi.js");
+var req_quitter_attente = require("./js/req_quitter_attente.js");
 
-var req_static = require("./req_static.js");
-var req_erreur = require("./req_erreur.js");
+var req_static = require("./js/req_static.js");
+var req_erreur = require("./js/req_erreur.js");
 
 //-------------------------------------------------------------------------
 // FONCTION DE CALLBACK APPELLEE POUR CHAQUE REQUETE
@@ -47,7 +47,7 @@ var traite_requete = function (req, res) {
     try {
         switch (pathname) {
             case '/':
-            case '/req_commencer':
+            case '/js/req_commencer':
                 req_commencer(req, res, query);
                 break;
             case '/req_afficher_formulaire_inscription':
