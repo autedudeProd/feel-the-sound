@@ -5,9 +5,9 @@
 <head>
     <title>Feel The Sound</title>
 
-    <!-- Bootstrap >
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="skin/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="skin/css/bootstrap.css">
+    <link rel="stylesheet" href="skin/css/bootstrap_perso.css">
     <script type="text/javascript" src="skin/js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="skin/js/bootstrap.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -26,6 +26,36 @@
 </head>
 
 <body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="col-md-4 element">
+                    <ul>
+                        <li><a href="/#accueil">Accueil</a></li>
+                        <li><a href="/#jeu">Le Jeu</a></li>
+                        <li><a href="/#developpeurs">Développeurs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 brand">
+                    <a href="/ "><img src="skin/img/vinyl.png"> </a>
+                </div>
+
+                <div class="col-md-4 connexion">
+                    <ul>
+                        <li><a class="btn" href="/req_deconexion?pseudo={pseudo}">Se Déconnecter</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--/.nav-collapse -->
+        </nav>
+        <!-- fin Navbar -->
+
+    </div>
     <div class="container">
 
         <div class="corp">
@@ -35,13 +65,16 @@
             <br>
             <br> {prop}
 
+            <div class="col-md-4 compteur">
+                <img src="skin/img/Sans-titre1.gif" </div>
+
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="footer ">
-        <p>AUTEDUDE Production</p>
-    </div>
+        <div class="footer ">
+            <p>AUTEDUDE Production</p>
+        </div>
 
 </body>
 
