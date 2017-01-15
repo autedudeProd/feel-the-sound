@@ -9,22 +9,22 @@ var fs = require("fs");
 require('remedial');
 
 var trait = function (req, res, query) {
-	
-	var i;
-	var contenu_fichier;
-	var liste_membres;
-	var liste
-	var page;
-	var marqueurs;
-	var contenu_solo;
-	var solo;
 
-// CHANGEMENT DE LA PHASE
+    var i;
+    var contenu_fichier;
+    var liste_membres;
+    var liste
+    var page;
+    var marqueurs;
+    var contenu_solo;
+    var solo;
 
-    contenu_fichier = fs.readFileSync("info.json","UTF-8");
+    // CHANGEMENT DE LA PHASE
+
+    contenu_fichier = fs.readFileSync("info.json", "UTF-8");
     liste_membres = JSON.parse(contenu_fichier);
 
-    for(i=0; i<liste_membres.length ;i++) {
+    for (i = 0; i < liste_membres.length; i++) {
         if (liste_membres[i].pseudo === query.pseudo) {
             liste_membres[i].phase = 1;
         }
@@ -32,31 +32,33 @@ var trait = function (req, res, query) {
     contenu_fichier = JSON.stringify(liste_membres);
     fs.writeFileSync("info.json", contenu_fichier, "UTF-8");
 
-// REINITIALISATION DU SCORE DES FICHIERS SOLO
-	contenu_solo = fs.readFileSync("solo/"+query.pseudo+".json","utf-8");
-	solo = JSON.parse(contenu_solo);
+    // REINITIALISATION DU SCORE DES FICHIERS SOLO
 
-	solo.bonne_reponse = 0;
-	solo.mauvaise_reponse = 0;
-	solo.compteur = 0;
+    contenu_solo = fs.readFileSync("solo/" + query.pseudo + ".json", "utf-8");
+    solo = JSON.parse(contenu_solo);
 
-	contenu_solo = JSON.stringify(solo);
-	fs.writeFileSync("solo/"+query.pseudo+".json",contenu_solo,"utf-8");
+    solo.bonne_reponse = 0;
+    solo.mauvaise_reponse = 0;
+    solo.compteur = 0;
 
-//AFFICHAGE DE LA PAGE
+    contenu_solo = JSON.stringify(solo);
+    fs.writeFileSync("solo/" + query.pseudo + ".json", contenu_solo, "utf-8");
 
-	page = fs.readFileSync('modele_accueil_membre.html','utf-8');
+    //AFFICHAGE DE LA PAGE
 
-		marqueurs = {};
-        marqueurs.pseudo = query.pseudo;
-		marqueurs.connecte = "";
-        page = page.supplant(marqueurs);
+    page = fs.readFileSync('modele_accueil_membre.html', 'utf-8');
 
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(page);
-        res.end();
+    marqueurs = {};
+    marqueurs.pseudo = query.pseudo;
+    marqueurs.connecte = "";
+    page = page.supplant(marqueurs);
+
+    res.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    res.write(page);
+    res.end();
 };
 //--------------------------------------------------------------------------
 
 module.exports = trait;
-                          

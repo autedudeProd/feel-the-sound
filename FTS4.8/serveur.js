@@ -23,8 +23,10 @@ var req_jouer_solo = require("./req_jouer_solo.js");
 var req_attendre_duel = require("./req_attendre_duel.js");
 var req_quitter_attente = require("./req_quitter_attente.js");
 var req_proposer_duel = require("./req_proposer_duel.js");
-var req_verifier_reponse = require("./req_verifier_reponse.js");
-var req_afficher_question = require("./req_afficher_question.js");
+var req_verifier_reponse_duel = require("./req_verifier_reponse_duel.js");
+var req_afficher_question_duel = require("./req_afficher_question_duel.js");
+var req_verifier_reponse_solo = require("./req_verifier_reponse_solo.js");
+var req_afficher_question_solo = require("./req_afficher_question_solo.js");
 var req_accueil_membre = require("./req_accueil_membre.js");
 var req_deconexion = require("./req_deconexion.js");
 var req_attendre_reponse_duel = require("./req_attendre_reponse_duel.js");
@@ -84,11 +86,17 @@ var traite_requete = function (req, res) {
         case '/req_proposer_duel':
             req_proposer_duel(req, res, query);
             break;
-        case '/req_verifier_reponse':
-            req_verifier_reponse(req, res, query);
+        case '/req_verifier_reponse_solo':
+            req_verifier_reponse_solo(req, res, query);
             break;
-        case '/req_afficher_question':
-            req_afficher_question(req, res, query);
+        case '/req_verifier_reponse_duel':
+            req_verifier_reponse_duel(req, res, query);
+            break;
+        case '/req_afficher_question_solo':
+            req_afficher_question_solo(req, res, query);
+            break;
+        case '/req_afficher_question_duel':
+            req_afficher_question_duel(req, res, query);
             break;
         case '/req_deconexion':
             req_deconexion(req, res, query);

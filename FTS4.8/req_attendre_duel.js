@@ -19,25 +19,31 @@ var trait = function (req, res, query) {
     var membre_connecte = [];
     var listeMembres;
     var contenu_fichier;
+    var adv;
 
 
     contenu_fichier = fs.readFileSync("info.json", "UTF-8");
     listeMembres = JSON.parse(contenu_fichier);
 
-    // TEST POUR SAVOIR ON EST DEFIE
+    // TEST POUR SAVOIR SI ON EST DEFIE
 
-    for (j = 0; j < listeMembres.length; j++) {
-        if (listeMembres[j].pseudo === query.pseudo) {
-            if (listeMembres[j].phase === 6) {
+    for (i = 0; i < listeMembres.length; i++) {
+        if (listeMembres[i].pseudo === query.pseudo) {
 
-                console.log("je suis defie par " + listeMembres[i].adv);
-                query.adv = listeMembres[i].adv;
+            console.log("je suis bien " + listeMembres[i].pseudo + " et je regarde si je suis defier");
+
+            if (listeMembres[i].phase === 6) {
+
+                adv = listeMembres[i].adv
+                console.log("je suis defie par " + adv);
 
                 page = fs.readFileSync('modele_choix_accept_refus.html', 'utf-8');
 
                 marqueurs = {};
+                marqueurs.adv = adv;
+                //console.log(marqueurs.adv);
                 marqueurs.pseudo = query.pseudo;
-                marqueurs.adv = query.adv;
+
                 page = page.supplant(marqueurs);
 
                 res.writeHead(200, {
@@ -61,7 +67,7 @@ var trait = function (req, res, query) {
                 marqueurs.pseudo = query.pseudo;
                 marqueurs.connecte = "";
 
-                console.log(membre_connecte[0].pseudo);
+                //console.log(membre_connecte[0].pseudo);
 
                 // AFFICHAGE DES MEMBRES CONNECTES A L'AIDE DU FICHIER info.json 
 

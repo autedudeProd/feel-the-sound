@@ -21,8 +21,6 @@
     <!-- fin Skin -->
 
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
-    <meta http-equiv="refresh" content="5; url=/req_afficher_question?pseudo={pseudo}" />
-
 </head>
 
 <body>
@@ -61,14 +59,28 @@
 
         <div class="corp">
 
-            {reponse}
-            <br> {score}
+            <h2> Êtes-vous pret ? </h2>
+
+            <p>
+                Ce mode de jeu vous propose de tester vos connaissances,
+                <br> De courts extraits musicaux vont se lancer et vous devrez choisir la bonne réponse parmis quatre propositions qui vous seront suggérés
+                <br> Vous avez jusqu'à 20 secondes pour y répondre
+                <br> Après avoir répondu, La bonne réponse s'affichera, ainsi que votre score
+            </p>
+
+            <br>
+
+            <a href="/req_jouer_duel?pseudo={pseudo}&adv={adv}">
+                <button type="button " class="btn btn-default " name="action" value="creer">Ok, c'est parti !</button>
+            </a>
+
+            </form>
 
         </div>
 
     </div>
 
-    <div class="footer">
+    <div class="footer ">
         <p>AUTEDUDE Production</p>
     </div>
 

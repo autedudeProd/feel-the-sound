@@ -35,7 +35,7 @@ var trait = function (req, res, query) {
 
     // AFFICHAGE DE LA PAGE
 
-    page = fs.readFileSync('modele_jeu_duel.html', 'utf-8');
+    page = fs.readFileSync('modele_rappel_regle_duel.html', 'utf-8');
 
     marqueurs = {};
     marqueurs.pseudo = query.pseudo;

@@ -16,6 +16,7 @@ var trait = function (req, res, query) {
     var i;
     var contenu_fichier;
     var listeMembres;
+    var open = {};
 
     //CHANGEMENT DE PHASE 
 
@@ -35,6 +36,14 @@ var trait = function (req, res, query) {
     }
     contenu_fichier = JSON.stringify(listeMembres);
     fs.writeFileSync("info.json", contenu_fichier, "UTF-8");
+
+    open.question = [];
+    open.bonne_reponse = "0";
+    open.compteur = "0";
+    open.mauvaise_reponse = "0";
+
+    open = JSON.stringify(open);
+    fs.writeFileSync("duel/" + query.pseudo + "vs" + query.adv + ".json", open, "utf-8");
 
     // AFFICHAGE DE LA PAGE
 

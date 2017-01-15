@@ -1,5 +1,5 @@
 //=========================================================================
-// Traitement de "req_jouer_solo"
+// Traitement de "req_jouer_duel"
 // Auteur : fts
 // Version : 30/11/2016
 //=========================================================================
@@ -62,7 +62,7 @@ var trait = function (req, res, query) {
     fs.writeFileSync("questions_reponses.json", d, "utf-8");
 
     console.log(liste);
-    contenu = JSON.parse(fs.readFileSync("solo/" + query.pseudo + ".json", "utf-8"));
+    contenu = JSON.parse(fs.readFileSync("duel/" + query.pseudo + "vs" + query.adv + ".json", "utf-8"));
 
     // ON STOCK LE NUMERO DE LA QUESTION ON UTILISE DANS UN AUTRE FICHIER
 
@@ -71,11 +71,11 @@ var trait = function (req, res, query) {
     marqueurs.question = liste[contenu.compteur].question;
 
     r = JSON.stringify(contenu);
-    fs.writeFileSync("solo/" + query.pseudo + ".json", r, "utf-8");
+    fs.writeFileSync("duel/" + query.pseudo + "vs" + query.adv + ".json", r, "utf-8");
 
-    // AFFICHAGE DE LA modele_jeu_solo
+    // AFFICHAGE DE LA modele_jeu_duel
 
-    page = fs.readFileSync('modele_jeu_solo.html', 'UTF-8');
+    page = fs.readFileSync('modele_jeu_duel.html', 'UTF-8');
     marqueurs.prop = "";
 
     // ON INTEGRE LES MP3 AUX QUESTIONS
@@ -171,7 +171,7 @@ var trait = function (req, res, query) {
 
     for (j = 0; j < liste[contenu.compteur].prop.length; j++) {
         console.log();
-        marqueurs.prop += '<a href="/req_verifier_reponse_solo?pseudo=' + query.pseudo + '&choix=' + j + '">\n <button type="button" class="btn btn-default" name="choix" value={' + j + '}>' + liste[contenu.compteur].prop[j] + "</button>";
+        marqueurs.prop += '<a href="/req_verifier_reponse?pseudo=' + query.pseudo + '&choix=' + j + '">\n <button type="button" class="btn btn-default" name="choix" value={' + j + '}>' + liste[contenu.compteur].prop[j] + "</button>";
 
     }
 

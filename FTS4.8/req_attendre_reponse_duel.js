@@ -16,7 +16,7 @@ var trait = function (req, res, query) {
     var i;
     var contenu_fichier;
     var listeMembres;
-    var adv = query.adv;
+    var adv;
     var phase;
 
     // RESULTAT DE LA REPONSE
@@ -36,17 +36,18 @@ var trait = function (req, res, query) {
 
                 console.log("on jou le duel");
 
-                page = fs.readFileSync('modele_jeu_duel.html', 'utf-8');
+                page = fs.readFileSync('modele_rappel_regle_duel.html', 'utf-8');
 
                 marqueurs = {};
                 marqueurs.pseudo = query.pseudo;
+                marqueurs.adv = query.adv;
                 page = page.supplant(marqueurs);
 
                 res.writeHead(200, {
                     'Content-Type': 'text/html'
                 });
                 res.write(page);
-                res.end;
+                res.end();
 
             } else if (listeMembres[i].phase === 1) {
 

@@ -23,9 +23,7 @@ var trait = function (req, res, query) {
     for (i = 0; i < liste_membres.length; i++) {
         if (liste_membres[i].pseudo === query.pseudo) {
             liste_membres[i].phase = 0;
-            console.log(4);
         }
-        console.log(1);
     }
     contenu_fichier = JSON.stringify(liste_membres);
     fs.writeFileSync("info.json", contenu_fichier, "UTF-8");

@@ -30,7 +30,7 @@ var trait = function (req, res, query) {
     contenu = JSON.parse(fs.readFileSync("solo/" + query.pseudo + ".json", "utf-8"));
     //Si on atteint X  question on renvoit la page de score
     if (contenu.compteur === 14) {
-        page = fs.readFileSync('modele_score.html', 'utf-8');
+        page = fs.readFileSync('modele_score_solo.html', 'utf-8');
         marqueurs = {};
         marqueurs.pseudo = query.pseudo;
         marqueurs.score = "Bravo tu as finis la série, tu as obtenus " + contenu.bonne_reponse + " bonne(s) réponse(s) sur " + Number(contenu.compteur + 1) + " questions au total";
@@ -99,7 +99,7 @@ var trait = function (req, res, query) {
             marqueurs.music = '<embed src="/media/TomberLaChemise.mp3"autostart="true" loop="false" hidden="true"></embed>';
         } else if (liste[contenu.compteur].num_question === 21) {
             marqueurs.music = '<embed src="/media/WorkFromHome.mp3"autostart="true" loop="false" hidden="true"></embed>';
-		} else if (liste[contenu.compteur].num_question === 22) {
+        } else if (liste[contenu.compteur].num_question === 22) {
             marqueurs.music = '<embed src="/media/WeDontTalkAnymore.mp3"autostart="true" loop="false" hidden="true"></embed>';
         } else if (liste[contenu.compteur].num_question === 23) {
             marqueurs.music = '<embed src="/media/TreatYouBetter.mp3"autostart="true" loop="false" hidden="true"></embed>';
@@ -123,28 +123,28 @@ var trait = function (req, res, query) {
             marqueurs.music = '<embed src="/media/LetMeLoveYou.mp3"autostart="true" loop="false" hidden="true"></embed>';
         } else if (liste[contenu.compteur].num_question === 33) {
             marqueurs.music = '<embed src="/media/InTheNameOfLove.mp3"autostart="true" loop="false" hidden="true"></embed>';
-		 } else if (liste[contenu.compteur].num_question === 34) {
+        } else if (liste[contenu.compteur].num_question === 34) {
             marqueurs.music = '<embed src="/media/InTheArmyNow.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 35) {
+        } else if (liste[contenu.compteur].num_question === 35) {
             marqueurs.music = '<embed src="/media/Heathens.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 36) {
+        } else if (liste[contenu.compteur].num_question === 36) {
             marqueurs.music = '<embed src="/media/Grey.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 37) {
+        } else if (liste[contenu.compteur].num_question === 37) {
             marqueurs.music = '<embed src="/media/DontWannaKnow.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 38) {
+        } else if (liste[contenu.compteur].num_question === 38) {
             marqueurs.music = '<embed src="/media/DontLetMeDown.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 39) {
+        } else if (liste[contenu.compteur].num_question === 39) {
             marqueurs.music = '<embed src="/media/ColdWater.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 40) {
+        } else if (liste[contenu.compteur].num_question === 40) {
             marqueurs.music = '<embed src="/media/CheapThrillsRap.mp3"autostart="true" loop="false" hidden="true"></embed>';
-         } else if (liste[contenu.compteur].num_question === 41) {
+        } else if (liste[contenu.compteur].num_question === 41) {
             marqueurs.music = '<embed src="/media/AllWeKnow.mp3"autostart="true" loop="false" hidden="true"></embed>';
-	     } 
+        }
 
         // ON AFFICHE LES PROPOSITIONS (PROP)
         for (j = 0; j < liste[contenu.compteur].prop.length; j++) {
             console.log();
-            marqueurs.prop += '<a href="/req_verifier_reponse?pseudo=' + query.pseudo + '&choix=' + j + '">\n <button type="button" class="btn btn-default" name="choix" value={' + j + '}>' + liste[contenu.compteur].prop[j] + "</button>";
+            marqueurs.prop += '<a href="/req_verifier_reponse_solo?pseudo=' + query.pseudo + '&choix=' + j + '">\n <button type="button" class="btn btn-default" name="choix" value={' + j + '}>' + liste[contenu.compteur].prop[j] + "</button>";
         }
         marqueurs.pseudo = query.pseudo;
         marqueurs.reponse = "";
